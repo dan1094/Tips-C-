@@ -1,0 +1,231 @@
+using Entidades;
+using Rule;
+using System;
+using System.Collections.Generic;
+using System.Web.Http;
+
+namespace LarsPoboxMailAmericas.Controllers
+{
+    /// <summary>
+    /// Consultas generales de  la aplicacion
+    /// </summary>
+    public class GlobalController : ApiController
+    {
+
+
+        #region Consultas
+
+        #region waybills
+
+        ///// <summary>
+        ///// Obtiene los ultimos 15 envios registrados
+        ///// </summary>
+        ///// <param name="idPoBox"></param>
+        ///// <returns></returns>
+        //public List<Waybill> GetRecentWaybills(int idPoBox)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.BuscarRecientes(idPoBox);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+
+        ///// <summary>
+        ///// Busqueda de guias con filtro
+        ///// </summary>
+        ///// <param name="filtro">Obligatorio : IdPobox
+        ///// Opcional: Waybill, Tracking, sender name, sender's phone, dates</param>
+        ///// <returns></returns>
+        //public List<Waybill> SearchWaybills(Filter filtro)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.BuscarGuias(filtro);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        ///// <summary>
+        ///// Get waybill info 
+        ///// </summary>
+        ///// <param name="idWaybill"></param>
+        ///// <param name="idPobox"></param>
+        ///// <returns></returns>
+        //public Waybill GetWaybillDetail(int idWaybill, int idPobox)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.DetalleGuia(idWaybill, idPobox);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        #endregion
+
+
+        ///// <summary>
+        ///// Obtiene el total de deuda de un casillero
+        ///// </summary>
+        ///// <param name="idPoBox"></param>
+        ///// <returns></returns>
+        //public decimal GetTotalDebido(int idPoBox)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.TotalDebido(idPoBox);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        //public List<Country> GetCountries()
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.ObtenerPaises();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        //public List<State> GetStates(int idCountry)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.ObtenerEstados(idCountry);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        ///// <summary>
+        ///// Obtiene las ciudades filtrando por ffw y nombre
+        ///// </summary>
+
+        ///// <returns></returns>
+        //public List<City> GetCities(string nombreEstado, int idPais)
+        //{            
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.ObtenerCiudades(nombreEstado, idPais);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+
+
+        ///// <summary>
+        ///// Obtener el servicio configurado para casilleros
+        ///// </summary>
+        ///// <returns></returns>
+        //public Service GetService()
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.ObtenerServicio();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="ffw"></param>
+        ///// <returns></returns>
+        //public List<Agent> GetAgents(string ffw)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.ObtenerAgencias(ffw);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+
+        ///// <summary>
+        ///// Busqueda de guias para pagar con filtro
+        ///// </summary>
+        ///// <param name="filtro">Obligatorio : IdPobox
+        ///// Opcional: Waybill, Tracking, sender name, sender's phone, dates</param>
+        ///// <returns></returns>
+        //public List<Waybill> SearchWaybillsForPay(Filter filtro)
+        //{
+        //    try
+        //    {
+        //        using (ConsultasRULE rule = new ConsultasRULE())
+        //        {
+        //            return rule.BuscarGuiasParaPago(filtro);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        RuleBase.EscribirArchivoError(ex);
+        //        throw new ArgumentException("Error in API: " + ex.Message);
+        //    }
+        //}
+
+        #endregion
+    }
+}
