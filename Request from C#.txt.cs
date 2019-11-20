@@ -9,8 +9,8 @@ using System.Web.Script.Serialization;
             //string responseCashPayment = PagosRULE.Request(strUrlApi, request);
             //ResponseTransaction responseTransaction = JsonConvert.DeserializeObject<ResponseTransaction>(responseCashPayment);
 
-//Request in C#
-  public static string Request(string url, string jsonContent)
+	//Request in C#
+  	public static string Request(string url, string jsonContent)
         {
             long length = 0;
             try
@@ -58,7 +58,7 @@ using System.Web.Script.Serialization;
 		
 		
 
-		public static IList<PaymentMethods> RequestPaymentMethods()
+	public static IList<PaymentMethods> RequestPaymentMethods()
         {
             InitializeValues();
             List<Peticion> paymentMethods = new List<Peticion>{
