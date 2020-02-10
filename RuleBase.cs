@@ -30,6 +30,17 @@ namespace Rule
             {
             }         
         }
+        
+        //Split a una lista por X cantidad 
+        public static List<List<T>> SplitList<T>(List<T> source, int cantidad)
+        {
+            if (cantidad <= 0) cantidad = 100;
+            return source
+                .Select((x, i) => new { Index = i, Value = x })
+                .GroupBy(x => x.Index / cantidad)
+                .Select(x => x.Select(v => v.Value).ToList())
+                .ToList();
+        }
 
     }
 }
